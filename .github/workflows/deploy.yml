@@ -6,6 +6,10 @@ on:
       - main # Or your default branch, e.g., master
   workflow_dispatch: # Allows manual triggering
 
+# Add this permissions block
+permissions:
+  contents: write # Allow write access to repository contents (for pushing to gh-pages)
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
@@ -29,3 +33,5 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./build
+          # Optional: if you want to force push (common for gh-pages)
+          # force_orphan: true
