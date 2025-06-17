@@ -28,8 +28,8 @@ function Main() {
           <Link href="https://github.com/kamanl16" target="_blank" rel="noreferrer" color="inherit"><GitHubIcon sx={{ fontSize: '1.8em' }}/></Link>
           <Link href="https://www.linkedin.com/in/kamanl16/" target="_blank" rel="noreferrer" color="inherit"><LinkedInIcon sx={{ fontSize: '1.8em' }}/></Link>
         </Box>
-        <Typography variant="h1" sx={{ fontSize: { xs: '4em', md: '5em' }, m: 0, color: 'text.primary' }}>Carmen Leung</Typography>
-        <Typography variant="h4" component="p" sx={{ fontSize: { xs: '1.2em', md: '1.5em' }, m: 0, color: 'text.primary' }}>Project Manager</Typography>
+        <Typography variant="h1" sx={{ fontSize: { xs: '3em', md: '4em' }, m: 0, color: 'text.primary' }}>Carmen Leung, PMP, PSM I</Typography>
+        <Typography variant="h4" component="p" sx={{ fontSize: { xs: '1.2em', md: '1.5em' }, m: 0, color: 'text.primary' }}>Technical Project Manager</Typography>
         <Box sx={{ display: { xs: 'flex', md: 'none' }, flexDirection: 'row', gap: '10px', color: 'text.primary', pt: 1 }}>
             <Link href="https://github.com/kamanl16" target="_blank" rel="noreferrer" color="inherit"><GitHubIcon sx={{ fontSize: '1.8em' }}/></Link>
             <Link href="https://www.linkedin.com/in/kamanl16/" target="_blank" rel="noreferrer" color="inherit"><LinkedInIcon sx={{ fontSize: '1.8em' }}/></Link>

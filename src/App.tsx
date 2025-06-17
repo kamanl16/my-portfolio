@@ -34,10 +34,6 @@ function App() {
             color: theme.palette.text.primary,
             fontFamily: "'Consolas', monospace",
           },
-          '.svg-inline--fa': {
-            color: theme.palette.text.primary,
-          },
-          // This rule fixes the date color on mobile devices
           '@media screen and (max-width: 1169px)': {
             '.vertical-timeline-element-date': {
               color: 'rgb(39, 40, 34)',
