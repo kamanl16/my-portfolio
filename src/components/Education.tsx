@@ -46,19 +46,24 @@ function Education() {
 
     return (
         <Box ref={ref} id="education" sx={{ py: '5%', px: { xs: '5%', md: '10%' }, textAlign: 'left' }}>
-            <Typography variant="h2" sx={{ mb: 4 }}>Education</Typography>
+            <Typography variant="h3">Education</Typography>
             <Grid2 container spacing={4}>
                 {educationData.map((edu, index) => (
                     <Grid2 xs={12} md={6} key={index}>
                         <Grow in={inView} style={{ transformOrigin: '0 0 0' }} timeout={500 * (index + 1)}>
-                            <Card elevation={3} sx={{ backgroundColor: theme.palette.mode === 'dark' ? '#fff' : theme.palette.background.paper, height: '100%' }}>
+                            <Card elevation={3} sx={{ backgroundColor: theme.palette.mode === 'dark' ? '#fff' : theme.palette.background.paper, height: '100%',
+                                transition: 'transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out',
+                                '&:hover': {
+                                    transform: 'translateY(-5px)',
+                                    boxShadow: 6,
+                                } }}>
                                 <CardContent>
                                     <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
                                         <Box sx={{
                                             mr: 2,
                                             p: 1.5,
                                             backgroundColor: 'rgba(0, 129, 203, 0.1)',
-                                            borderRadius: '50%',
+                                            borderRadius: 2,
                                             display: 'flex',
                                             alignItems: 'center',
                                             justifyContent: 'center'

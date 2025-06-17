@@ -6,13 +6,14 @@ import {
   Timeline,
   Expertise,
   Education,
+  Certifications,
   Navigation,
   Footer,
 } from "./components";
 import FadeIn from './components/FadeIn';
 
 function App() {
-  const [mode, setMode] = useState<'light' | 'dark'>('dark');
+  const [mode, setMode] = useState<'light' | 'dark'>('light');
   const theme = useMemo(() => (mode === 'dark' ? darkTheme : lightTheme), [mode]);
 
   const handleModeChange = () => {
@@ -48,6 +49,7 @@ function App() {
         <Expertise />
         <Timeline />
         <Education />
+        <Certifications />
       </FadeIn>
       <Footer />
     </ThemeProvider>

@@ -30,7 +30,7 @@ function Timeline() {
 
   return (
     <Box id="history" sx={{ py: '5%', px: { xs: '5%', md: '10%' }, textAlign: 'left' }}>
-        <Typography variant="h2" sx={{ mb: 4 }}>Career History</Typography>
+        <Typography variant="h3">Career History</Typography>
         <VerticalTimeline lineColor={theme.palette.grey[400]}>
           <VerticalTimelineElement
             className="vertical-timeline-element--work"

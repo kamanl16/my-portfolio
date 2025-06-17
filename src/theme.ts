@@ -24,7 +24,18 @@ let lightTheme = createTheme({
     button: {
       textTransform: 'initial'
     }
-  }
+  },
+  components: {
+    MuiTypography: {
+      styleOverrides: {
+        h3: { // This targets variant="h3"
+          fontSize: '2.0rem',
+          fontWeight: 'bold',
+          marginBottom: '32px', // theme.spacing(4)
+        },
+      },
+    },
+  },
 });
 
 let darkTheme = createTheme({
@@ -50,6 +61,17 @@ let darkTheme = createTheme({
     button: {
       textTransform: 'initial'
     }
+  },
+  components: {
+    MuiTypography: {
+      styleOverrides: {
+        h3: { // This targets variant="h3"
+          fontSize: '2.0rem',
+          fontWeight: 'bold',
+          marginBottom: '32px', // theme.spacing(4)
+        },
+      },
+    },
   },
 });
 

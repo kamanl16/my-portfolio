@@ -23,7 +23,7 @@ function Expertise() {
     const theme = useTheme();
     return (
         <Box id="expertise" sx={{ py: '5%', px: { xs: '5%', md: '10%' }, textAlign: 'left' }}>
-            <Typography variant="h2" sx={{ mb: 4 }}>Expertise</Typography>
+            <Typography variant="h3" sx={{ mb: 4 }}>Expertise</Typography>
             <Box sx={{
                 display: 'grid',
                 gridTemplateColumns: { xs: '1fr', md: 'repeat(3, 1fr)' },
