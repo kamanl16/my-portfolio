@@ -24,13 +24,13 @@ function Main() {
       backgroundPosition: 'center',
     }}>
       <Box sx={{ textAlign: 'left', zIndex: 2 }}>
-        <Box sx={{ display: { xs: 'none', md: 'flex' }, flexDirection: 'row', gap: '10px', color: 'white', mb: 1 }}>
+        <Box sx={{ display: { xs: 'none', md: 'flex' }, flexDirection: 'row', gap: '10px', color: 'text.primary', mb: 1 }}>
           <Link href="https://github.com/kamanl16" target="_blank" rel="noreferrer" color="inherit"><GitHubIcon sx={{ fontSize: '1.8em' }}/></Link>
           <Link href="https://www.linkedin.com/in/kamanl16/" target="_blank" rel="noreferrer" color="inherit"><LinkedInIcon sx={{ fontSize: '1.8em' }}/></Link>
         </Box>
-        <Typography variant="h1" sx={{ fontSize: { xs: '4em', md: '5em' }, m: 0 }}>Carmen Leung</Typography>
-        <Typography variant="h4" component="p" sx={{ fontSize: { xs: '1.2em', md: '1.5em' }, m: 0 }}>Project Manager</Typography>
-        <Box sx={{ display: { xs: 'flex', md: 'none' }, flexDirection: 'row', gap: '10px', color: 'white', pt: 1 }}>
+        <Typography variant="h1" sx={{ fontSize: { xs: '4em', md: '5em' }, m: 0, color: 'text.primary' }}>Carmen Leung</Typography>
+        <Typography variant="h4" component="p" sx={{ fontSize: { xs: '1.2em', md: '1.5em' }, m: 0, color: 'text.primary' }}>Project Manager</Typography>
+        <Box sx={{ display: { xs: 'flex', md: 'none' }, flexDirection: 'row', gap: '10px', color: 'text.primary', pt: 1 }}>
             <Link href="https://github.com/kamanl16" target="_blank" rel="noreferrer" color="inherit"><GitHubIcon sx={{ fontSize: '1.8em' }}/></Link>
             <Link href="https://www.linkedin.com/in/kamanl16/" target="_blank" rel="noreferrer" color="inherit"><LinkedInIcon sx={{ fontSize: '1.8em' }}/></Link>
         </Box>
