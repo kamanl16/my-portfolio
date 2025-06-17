@@ -17,7 +17,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 
 const drawerWidth = 240;
-const navItems = [['Expertise', 'expertise'], ['History', 'history'], /*['Projects', 'projects'], ['Contact', 'contact']*/];
+const navItems = [['Expertise', 'expertise'], ['History', 'history']];
 
 function Navigation({parentToChild, modeChange}: any) {
 
@@ -58,7 +58,7 @@ function Navigation({parentToChild, modeChange}: any) {
         {navItems.map((item) => (
           <ListItem key={item[0]} disablePadding>
             <ListItemButton sx={{ textAlign: 'center' }} onClick={() => scrollToSection(item[1])}>
-              <ListItemText primary={item[0]} />
+              <ListItemText primaryTypographyProps={{fontSize: '1.2rem'}} primary={item[0]} />
             </ListItemButton>
           </ListItem>
         ))}
@@ -90,7 +90,7 @@ function Navigation({parentToChild, modeChange}: any) {
           )}
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
             {navItems.map((item) => (
-              <Button key={item[0]} onClick={() => scrollToSection(item[1])} sx={{ color: 'text.primary' }}>
+              <Button key={item[0]} onClick={() => scrollToSection(item[1])} sx={{ color: 'text.primary', fontSize: '1.1rem'}}>
                 {item[0]}
               </Button>
             ))}
