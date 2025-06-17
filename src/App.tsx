@@ -1,42 +1,53 @@
-import React, {useState, useEffect} from "react";
+import React, { useState, useMemo, useEffect } from "react";
+import { ThemeProvider, CssBaseline, GlobalStyles } from '@mui/material';
+import { lightTheme, darkTheme } from './theme';
 import {
   Main,
   Timeline,
   Expertise,
   Navigation,
   Footer,
+  Project,
+  Contact,
 } from "./components";
 import FadeIn from './components/FadeIn';
-import './index.scss';
 
 function App() {
-    const [mode, setMode] = useState<string>('dark');
+  const [mode, setMode] = useState<'light' | 'dark'>('dark');
+  const theme = useMemo(() => (mode === 'dark' ? darkTheme : lightTheme), [mode]);
 
-    const handleModeChange = () => {
-        if (mode === 'dark') {
-            setMode('light');
-        } else {
-            setMode('dark');
-        }
-    }
+  const handleModeChange = () => {
+    setMode((prevMode) => (prevMode === 'dark' ? 'light' : 'dark'));
+  };
 
-    useEffect(() => {
-        window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
-      }, []);
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+  }, []);
 
-    return (
-    <div className={`main-container ${mode === 'dark' ? 'dark-mode' : 'light-mode'}`}>
-        <Navigation parentToChild={{mode}} modeChange={handleModeChange}/>
-        <FadeIn transitionDuration={700}>
-            <Main/>
-            <Expertise/>
-            <Timeline/>
-            {/* <Project/> */}
-            {/* <Contact/> */}
-        </FadeIn>
-        <Footer />
-    </div>
-    );
+  return (
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
+      <GlobalStyles
+        styles={{
+          '.vertical-timeline.vertical-timeline-custom-line::before': {
+            background: theme.palette.grey[400],
+          },
+          '.svg-inline--fa': {
+            color: theme.palette.text.primary,
+          },
+        }}
+      />
+      <Navigation parentToChild={{ mode }} modeChange={handleModeChange} />
+      <FadeIn transitionDuration={700}>
+        <Main />
+        <Expertise />
+        <Timeline />
+        {/* <Project />
+        <Contact /> */}
+      </FadeIn>
+      <Footer />
+    </ThemeProvider>
+  );
 }
 
 export default App;

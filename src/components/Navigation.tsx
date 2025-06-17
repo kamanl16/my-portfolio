@@ -17,7 +17,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 
 const drawerWidth = 240;
-const navItems = [['Expertise', 'expertise'], ['History', 'history']];
+const navItems = [['Expertise', 'expertise'], ['History', 'history'], /*['Projects', 'projects'], ['Contact', 'contact']*/];
 
 function Navigation({parentToChild, modeChange}: any) {
 
@@ -32,11 +32,8 @@ function Navigation({parentToChild, modeChange}: any) {
 
   useEffect(() => {
     const handleScroll = () => {
-      const navbar = document.getElementById("navigation");
-      if (navbar) {
-        const scrolled = window.scrollY > navbar.clientHeight;
-        setScrolled(scrolled);
-      }
+      const isScrolled = window.scrollY > 0;
+      setScrolled(isScrolled);
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -47,19 +44,15 @@ function Navigation({parentToChild, modeChange}: any) {
   }, []);
 
   const scrollToSection = (section: string) => {
-    console.log(section)
-    const expertiseElement = document.getElementById(section);
-    if (expertiseElement) {
-      expertiseElement.scrollIntoView({ behavior: 'smooth' });
-      console.log('Scrolling to:', expertiseElement);  // Debugging: Ensure the element is found
-    } else {
-      console.error('Element with id "expertise" not found');  // Debugging: Log error if element is not found
+    const element = document.getElementById(section);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
     }
   };
 
   const drawer = (
-    <Box className="navigation-bar-responsive" onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
-      <p className="mobile-menu-top"><ListIcon/>Menu</p>
+    <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
+      <p style={{display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '5px', fontWeight: 'bold'}}><ListIcon/>Menu</p>
       <Divider />
       <List>
         {navItems.map((item) => (
@@ -76,25 +69,28 @@ function Navigation({parentToChild, modeChange}: any) {
   return (
     <Box sx={{ display: 'flex' }}>
       <CssBaseline />
-      <AppBar component="nav" id="navigation" className={`navbar-fixed-top${scrolled ? ' scrolled' : ''}`}>
-        <Toolbar className='navigation-bar'>
+      <AppBar component="nav" sx={{
+          boxShadow: scrolled ? '0px 2px 4px -1px rgba(0,0,0,0.2), 0px 4px 5px 0px rgba(0,0,0,0.14), 0px 1px 10px 0px rgba(0,0,0,0.12)' : 'none',
+          backgroundColor: 'background.default',
+        }}>
+        <Toolbar sx={{ justifyContent: 'space-between' }}>
           <IconButton
             color="inherit"
             aria-label="open drawer"
             edge="start"
             onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { sm: 'none' } }}
+            sx={{ mr: 2, display: { sm: 'none' }, color: 'text.primary' }}
           >
             <MenuIcon />
           </IconButton>
           {mode === 'dark' ? (
-            <LightModeIcon onClick={() => modeChange()}/>
+            <LightModeIcon onClick={() => modeChange()} sx={{ color: 'text.primary', cursor: 'pointer' }}/>
           ) : (
-            <DarkModeIcon onClick={() => modeChange()}/>
+            <DarkModeIcon onClick={() => modeChange()} sx={{ color: 'text.primary', cursor: 'pointer' }}/>
           )}
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
             {navItems.map((item) => (
-              <Button key={item[0]} onClick={() => scrollToSection(item[1])} sx={{ color: '#fff' }}>
+              <Button key={item[0]} onClick={() => scrollToSection(item[1])} sx={{ color: 'text.primary' }}>
                 {item[0]}
               </Button>
             ))}
