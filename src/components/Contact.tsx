@@ -1,12 +1,11 @@
 import React, { useRef, useState } from 'react';
-import '../assets/styles/Contact.scss';
-// import emailjs from '@emailjs/browser';
-import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
+import { Box, Typography, TextField, Button } from '@mui/material';
 import SendIcon from '@mui/icons-material/Send';
-import TextField from '@mui/material/TextField';
+import { useTheme } from '@mui/material/styles';
+
 
 function Contact() {
+  const theme = useTheme();
 
   const [name, setName] = useState<string>('');
   const [email, setEmail] = useState<string>('');
@@ -24,92 +23,67 @@ function Contact() {
     setNameError(name === '');
     setEmailError(email === '');
     setMessageError(message === '');
-
-    /* Uncomment below if you want to enable the emailJS */
-
-    // if (name !== '' && email !== '' && message !== '') {
-    //   var templateParams = {
-    //     name: name,
-    //     email: email,
-    //     message: message
-    //   };
-
-    //   console.log(templateParams);
-    //   emailjs.send('service_id', 'template_id', templateParams, 'api_key').then(
-    //     (response) => {
-    //       console.log('SUCCESS!', response.status, response.text);
-    //     },
-    //     (error) => {
-    //       console.log('FAILED...', error);
-    //     },
-    //   );
-    //   setName('');
-    //   setEmail('');
-    //   setMessage('');
-    // }
   };
 
   return (
-    <div id="contact">
-      <div className="items-container">
-        <div className="contact_wrapper">
-          <h1>Contact Me</h1>
-          <p>Got a project waiting to be realized? Let's collaborate and make it happen!</p>
-          <Box
-            ref={form}
-            component="form"
-            noValidate
-            autoComplete="off"
-            className='contact-form'
-          >
-            <div className='form-flex'>
-              <TextField
-                required
-                id="outlined-required"
-                label="Your Name"
-                placeholder="What's your name?"
-                value={name}
-                onChange={(e) => {
-                  setName(e.target.value);
-                }}
-                error={nameError}
-                helperText={nameError ? "Please enter your name" : ""}
-              />
-              <TextField
-                required
-                id="outlined-required"
-                label="Email / Phone"
-                placeholder="How can I reach you?"
-                value={email}
-                onChange={(e) => {
-                  setEmail(e.target.value);
-                }}
-                error={emailError}
-                helperText={emailError ? "Please enter your email or phone number" : ""}
-              />
-            </div>
-            <TextField
-              required
-              id="outlined-multiline-static"
-              label="Message"
-              placeholder="Send me any inquiries or questions"
-              multiline
-              rows={10}
-              className="body-form"
-              value={message}
-              onChange={(e) => {
-                setMessage(e.target.value);
-              }}
-              error={messageError}
-              helperText={messageError ? "Please enter the message" : ""}
-            />
-            <Button variant="contained" endIcon={<SendIcon />} onClick={sendEmail}>
-              Send
-            </Button>
-          </Box>
-        </div>
-      </div>
-    </div>
+    <Box id="contact" sx={{ py: '5%', px: { xs: '5%', md: '10%' }, textAlign: 'left' }}>
+      <Typography variant="h1" sx={{ mb: 2 }}>Contact Me</Typography>
+      <Typography paragraph>Got a project waiting to be realized? Let's collaborate and make it happen!</Typography>
+      <Box
+        ref={form}
+        component="form"
+        noValidate
+        autoComplete="off"
+        sx={{ pt: 2 }}
+      >
+        <Box sx={{ display: 'flex', gap: 2, mb: 2, flexDirection: { xs: 'column', md: 'row' }}}>
+          <TextField
+            required
+            fullWidth
+            label="Your Name"
+            placeholder="What's your name?"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            error={nameError}
+            helperText={nameError ? "Please enter your name" : ""}
+          />
+          <TextField
+            required
+            fullWidth
+            label="Email / Phone"
+            placeholder="How can I reach you?"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            error={emailError}
+            helperText={emailError ? "Please enter your email or phone number" : ""}
+          />
+        </Box>
+        <TextField
+          required
+          fullWidth
+          multiline
+          rows={10}
+          label="Message"
+          placeholder="Send me any inquiries or questions"
+          value={message}
+          onChange={(e) => setMessage(e.target.value)}
+          error={messageError}
+          helperText={messageError ? "Please enter the message" : ""}
+          sx={{ mb: 2 }}
+        />
+        <Button variant="contained" endIcon={<SendIcon />} onClick={sendEmail} sx={{
+          float: 'right',
+          backgroundColor: theme.palette.mode === 'dark' ? 'white' : 'primary.main',
+          color: theme.palette.mode === 'dark' ? '#050f0b' : 'white',
+          '&:hover': {
+            backgroundColor: 'secondary.main',
+            color: 'white',
+          }
+        }}>
+          Send
+        </Button>
+      </Box>
+    </Box>
   );
 }
 
