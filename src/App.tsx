@@ -7,8 +7,6 @@ import {
   Expertise,
   Navigation,
   Footer,
-  Project,
-  Contact,
 } from "./components";
 import FadeIn from './components/FadeIn';
 
@@ -42,8 +40,6 @@ function App() {
         <Main />
         <Expertise />
         <Timeline />
-        {/* <Project />
-        <Contact /> */}
       </FadeIn>
       <Footer />
     </ThemeProvider>
