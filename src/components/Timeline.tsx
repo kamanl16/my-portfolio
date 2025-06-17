@@ -21,7 +21,6 @@ function Timeline() {
 
   const commonIconStyle = {
     background: 'rgb(0, 111, 202)',
-    color: '#fff',
     boxShadow: `0 0 0 4px ${theme.palette.grey[400]}`,
   };
 
@@ -39,54 +38,54 @@ function Timeline() {
             contentArrowStyle={commonArrowStyle}
             date="Sep 2023 – Jun 2024"
             iconStyle={commonIconStyle}
-            icon={<FontAwesomeIcon icon={faBriefcase} />}
+            icon={<FontAwesomeIcon icon={faBriefcase} style={{ color: '#fff' }} />}
           >
-            <h3 className="vertical-timeline-element-title">Project Manager</h3>
-            <h4 className="vertical-timeline-element-subtitle">Swire Coca-Cola Limited, Hong Kong</h4>
+            <h3 className="vertical-timeline-element-title">Temporary Project Manager - Finance Solutions</h3>
+            <h4 className="vertical-timeline-element-subtitle">Swire Coca-Cola Limited, Hong Kong (Remote)</h4>
             <p style={textSecondary}>
-              Remotely supervised and supported systems across Hong Kong, Vietnam, and Cambodia, adapting an SAPUI5 workflow to replace a costly system. Improved applicant processing, accelerated deployment, and leveraged SDLC, Hybrid PM, and Jira.
+              Eliminated 100% of ongoing third-party system expenses across Vietnam and Cambodia by orchestrating the rapid, remote deployment of a customized SAPUI5 workflow system.
             </p>
           </VerticalTimelineElement>
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
             date="Jul 2022 – Aug 2023"
             iconStyle={commonIconStyle}
-            icon={<FontAwesomeIcon icon={faBriefcase} />}
+            icon={<FontAwesomeIcon icon={faBriefcase} style={{ color: '#fff' }} />}
             contentStyle={commonContentStyle}
             contentArrowStyle={commonArrowStyle}
           >
-            <h3 className="vertical-timeline-element-title">Project Manager</h3>
-            <h4 className="vertical-timeline-element-subtitle">Swire Pacific Limited, Hong Kong</h4>
+            <h3 className="vertical-timeline-element-title">Project Manager - Finance Solutions</h3>
+            <h4 className="vertical-timeline-element-subtitle">Swire Pacific Limited - Beverage Division, Hong Kong</h4>
             <p style={textSecondary}>
-              Led an SAP HANA S/4 migration for FI/CO module, integrating workflows that processed 15K+ applications. Oversaw SDLC using ABAP APIs and SAPUI5 systems, streamlining approvals by 50%. Directed cross-functional teams and facilitated UAT.
+              Led an SAP S/4 HANA migration for the FI/CO module, delivering custom workflows that processed 15,000+ applications in 6 months and streamlined financial approvals by 50%.
             </p>
           </VerticalTimelineElement>
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
             date="Jul 2013 – Jul 2022"
             iconStyle={commonIconStyle}
-            icon={<FontAwesomeIcon icon={faBriefcase} />}
+            icon={<FontAwesomeIcon icon={faBriefcase} style={{ color: '#fff' }} />}
             contentStyle={commonContentStyle}
             contentArrowStyle={commonArrowStyle}
           >
             <h3 className="vertical-timeline-element-title">Assistant Project Manager</h3>
             <h4 className="vertical-timeline-element-subtitle">Octopus Cards Limited, Hong Kong</h4>
             <p style={textSecondary}>
-              Oversaw the Octopus Service Points kiosk network (Java, C++, SQL, RESTful). Led development from initial launch to major enhancements like Consumption Voucher & Public Transport Subsidy schemes. Developed backend for New Retail Reader integration (Spring Boot, Kafka, Elasticsearch, Docker).
+              Oversaw the software development lifecycle for the 51-location Octopus Service Points kiosk network serving over 7.4 million residents, and delivered critical functionality for government initiatives like the HK Consumption Voucher Scheme.
             </p>
           </VerticalTimelineElement>
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
             date="Jun 2012 – May 2013"
             iconStyle={commonIconStyle}
-            icon={<FontAwesomeIcon icon={faBriefcase} />}
+            icon={<FontAwesomeIcon icon={faBriefcase} style={{ color: '#fff' }} />}
             contentStyle={commonContentStyle}
             contentArrowStyle={commonArrowStyle}
           >
             <h3 className="vertical-timeline-element-title">Mobile Application Programmer Trainee</h3>
             <h4 className="vertical-timeline-element-subtitle">Top Pine Technology Limited, Hong Kong</h4>
             <p style={textSecondary}>
-              Developed Android applications (Java, Android SDK) with intuitive interfaces, including educational and interactive apps. Supported implementation and updates for multiple mobile projects.
+              Developed and launched 5 distinct Android applications from concept to completion, including educational apps and interactive games, using Java and the Android SDK.
             </p>
           </VerticalTimelineElement>
         </VerticalTimeline>
