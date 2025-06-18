@@ -7,6 +7,7 @@ import {
   Expertise,
   Education,
   Certifications,
+  Project,
   Navigation,
   Footer,
 } from "./components";
@@ -50,6 +51,7 @@ function App() {
         <Timeline />
         <Education />
         <Certifications />
+        <Project />
       </FadeIn>
       <Footer />
     </ThemeProvider>

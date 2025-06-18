@@ -12,18 +12,21 @@ const certificationData = [
         name: "Project Management Professional (PMP)",
         issuer: "Project Management Institute",
         date: "Expires Feb 2028",
+        infoFontFamily: "'Consolas', monospace",
         description: "A globally recognized certification for project management proficiency and leadership."
     },
     {
         name: "Professional Scrum Master I (PSM I)",
         issuer: "Scrum.org",
         date: "Issued May 2025",
+        infoFontFamily: "'Consolas', monospace",
         description: "Demonstrates a fundamental level of Scrum mastery and understanding of the framework."
     },
     {
         name: "AWS Certified Cloud Practitioner",
         issuer: "Amazon Web Services (AWS)",
         date: "Expires May 2028",
+        infoFontFamily: "'Consolas', monospace",
         description: "Validates foundational, high-level understanding of AWS Cloud, services, and terminology."
     }
 ];
@@ -72,15 +75,15 @@ function Certifications() {
                                         </Typography>
                                         
 
-                                            <Box sx={{ display: 'flex', alignItems: 'center', gap: 2, mt: 0.5, mb: 1.5, color: cardSecondaryTextColor}}>
-                                                <Box sx={{ display: 'flex', alignItems: 'center', gap: 0.5 }}>
-                                                    <ApartmentIcon fontSize="small" />
-                                                    <Typography variant="body2">{cert.issuer}</Typography>
-                                                </Box>
-                                                <Box sx={{ display: 'flex', alignItems: 'center', gap: 0.5 }}>
-                                                    <CalendarTodayIcon fontSize="small" />
-                                                    <Typography variant="body2">{cert.date}</Typography>
-                                                </Box>
+                                        <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 2, mt:1, mb: 2, color: cardSecondaryTextColor }}>
+                                            <Box sx={{ display: 'flex', alignItems: 'center', gap: 0.5 }}>
+                                                <ApartmentIcon fontSize="small" />
+                                                <Typography variant="body2" sx={{ fontFamily: cert.infoFontFamily }}>{cert.issuer}</Typography>
+                                            </Box>
+                                            <Box sx={{ display: 'flex', alignItems: 'center', gap: 0.5 }}>
+                                                <CalendarTodayIcon fontSize="small" />
+                                                <Typography variant="body2" sx={{ fontFamily: cert.infoFontFamily }}>{cert.date}</Typography>
+                                            </Box>
                                             </Box>
                                         </Box>
                                     </Box>
