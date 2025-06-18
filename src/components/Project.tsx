@@ -1,61 +1,73 @@
-import React from "react";
-import { Box, Typography, Link, Grid } from '@mui/material';
-import mock01 from '../assets/images/mock01.png';
-import mock02 from '../assets/images/mock02.png';
-import mock03 from '../assets/images/mock03.png';
-import mock04 from '../assets/images/mock04.png';
-import mock05 from '../assets/images/mock05.png';
-import mock06 from '../assets/images/mock06.png';
-import mock07 from '../assets/images/mock07.png';
-import mock08 from '../assets/images/mock08.png';
-import mock09 from '../assets/images/mock09.png';
-import mock10 from '../assets/images/mock10.png';
+import React from 'react';
+import { Box, Typography, Grow } from '@mui/material';
+import Grid2 from '@mui/material/Unstable_Grid2';
+import { useInView } from 'react-intersection-observer';
+import ProjectCard from './ProjectCard'; // Import the new component
 
+import Screen01 from '../assets/images/hotel-app/HotelAppImage01.png';
+import Screen02 from '../assets/images/hotel-app/HotelAppImage02.png';
+import workPlaceholder from '../assets/images/work-project-placeholder.png';
 
-const projects = [
-    { href: "https://www.filmate.club/", src: mock10, title: "Filmate AI", description: "Developed movie finder app with semantic search and sentiment analysis using OpenAI GPT-3.5 Turbo, Qdrant, React, and Flask." },
-    { href: "https://yujisatojr.itch.io/highspeedchase", src: mock09, title: "High Speed Chase", description: "Designed, developed, and launched a 3D multiplayer racing game with C# and Unity. This is available on Itch.io for gamers worldwide to enjoy." },
-    { href: "https://yujisatojr.itch.io/spacecraft", src: mock08, title: "Astro Raiders", description: "Developed and released a 2D shooting game with C# and Unity. This project is hosted on the Itch.io public marketplace." },
-    { href: "https://www.datumlearn.com/", src: mock07, title: "Datum: Integrated Learning Platform", description: "This is an online educational platform that provides high-quality, data science-focused learning resources in the Japanese language. I created the entire platform from scratch using Ruby on Rails." },
-    { href: "http://www.wemanage.jp/", src: mock06, title: "WeManage: Real Estate Asset Management", description: "This mobile application allows realtors in Japan to securely manage their property information and view future income predictions. This app is built with Ruby on Rails and JavaScript." },
-    { href: "https://www.byuh.edu/covid-19-case-management", src: mock05, title: "COVID-19 Case Management", description: "Built official charts for COVID/vaccination tracking for an educational institution using JavaScript and the Google Sheets API v4. The dashboard served the university's leadership in their decision-making processes." },
-    { href: "https://github.com/yujisatojr/multi-reg-analysis", src: mock04, title: "Multiple Regression Property Analysis", description: "Analyzed the real estate market in Japan and predicted property prices by implementing statistical methods such as OLS and multi-regression analysis. This project leveraged Python and various libraries such as Pandas, NumPy, Matplotlib, and Scikit-Learn." },
-    { href: "https://holokai.byuh.edu/programs-of-study", src: mock03, title: "Programs of Study", description: "Designed and developed a custom component for a CMS-based platform (e.g., 'Brightspot') using Java, Handlebars, and LESS. University students can find their majors of interest through this module." },
-    { href: "https://hookele.byuh.edu/transfer-evaluation-guidelines-and-matrix", src: mock02, title: "Transfer Evaluation Matrix", description: "Created an interactive CSV table generator with Java, Handlebars, and LESS. This project helps transfer students to quickly identify eligible credits." },
-    { href: "https://github.com/yujisatojr/submeowrine", src: mock01, title: "Submeowrine", description: "Developed and released an Android mobile application using Java and Android Studio that runs a 2D shooting game." },
+const projectData = [
+    {
+        name: "Full-Stack Hotel Reservation System",
+        images: [Screen01, Screen02],
+        category: "Full-Stack",
+        description: "Architected and developed a full-stack hotel reservation system featuring a Java Spring Boot backend and a native Android client application.",
+        tech: ["Java", "Spring Boot", "Android SDK", "MySQL", "RESTful API"],
+        sourceLink: "https://github.com/kamanl16/MCDA5550_A00476407_MyHotelApp/"
+    },
+    {
+        name: "SAP S/4 HANA Migration & Workflow Automation",
+        images: [workPlaceholder],
+        category: "Work Project (ERP)",
+        description: "Led an SAP S/4 HANA migration for the FI/CO module, delivering custom SAPUI5 workflows that processed over 15,000 applications in the first six months.",
+        tech: ["SAPUI5", "ABAP", "SAP HANA S/4", "SQL"],
+    },
+    {
+        name: "Octopus Kiosk - HK Consumption Voucher Scheme",
+        images: [workPlaceholder], 
+        category: "Work Project (Public Initiative)",
+        description: "Delivered critical functionality for a government scheme on a 3-month deadline, enabling over 6.5 million residents to collect vouchers while maintaining >99.9% uptime.",
+        tech: ["Java", "C++", "JNI", "SOAP"],
+    },
+    {
+        name: "Octopus Kiosk - System Development & Recovery",
+        images: [workPlaceholder],
+        category: "Work Project (Hardware & Software)",
+        description: "Co-developed a new kiosk system that migrated 500,000+ cards. Later reduced kiosk downtime by 80% by leading a root cause analysis and collaborating with the hardware vendor on physical modifications.",
+        tech: ["Java", "C++", "JNI", "ASP.NET", "Vendor Management"],
+    },
+    {
+        name: "Backend NRR Device Integration",
+        images: [workPlaceholder],
+        category: "Work Project (Backend & Data)",
+        description: "Developed and containerized a backend Kafka client in 2 weeks to support a network of ~10,000 active devices and built a real-time Elasticsearch dashboard for operational visibility.",
+        tech: ["Java", "Spring Boot", "Kafka", "Elasticsearch", "Docker"],
+    }
 ];
 
 function Project() {
-    return(
-        <Box id="projects" sx={{ py: '5%', px: { xs: '5%', md: '10%' }, textAlign: 'left' }}>
-            <Typography variant="h1" sx={{ mb: 4 }}>Personal Projects</Typography>
-            <Grid container spacing={5}>
-                {projects.map(project => (
-                    <Grid item xs={12} md={6} key={project.title}>
-                        <Link href={project.href} target="_blank" rel="noreferrer">
-                            <Box
-                                component="img"
-                                src={project.src}
-                                alt="thumbnail"
-                                sx={{
-                                    width: '100%',
-                                    borderRadius: '5px',
-                                    transition: 'transform .2s',
-                                    '&:hover': {
-                                        transform: 'scale(1.05)',
-                                    },
-                                }}
-                            />
-                        </Link>
-                        <Link href={project.href} target="_blank" rel="noreferrer" sx={{ textDecoration: 'none' }}>
-                            <Typography variant="h2" sx={{ '&:hover': { textDecoration: 'underline' } }}>
-                                {project.title}
-                            </Typography>
-                        </Link>
-                        <Typography paragraph>{project.description}</Typography>
-                    </Grid>
+    const { ref, inView } = useInView({
+        triggerOnce: true,
+        threshold: 0.1,
+    });
+
+    return (
+        <Box ref={ref} id="projects" sx={{ py: '5%', px: { xs: '5%', md: '10%' }, textAlign: 'left' }}>
+            <Typography variant="h3" sx={{ mb: 4 }}>Projects</Typography>
+            <Grid2 container spacing={4} sx={{ alignItems: 'stretch' }}> {/* Ensure items stretch */}
+                {projectData.map((proj, index) => (
+                    <Grid2 xs={12} sm={6} lg={4} key={index}>
+                        <Grow in={inView} style={{ transformOrigin: '0 0 0' }} timeout={500 * (index + 1)}>
+                             {/* Added a div with height: '100%' to ensure the card can stretch */}
+                            <div style={{ height: '100%' }}>
+                                <ProjectCard project={proj} />
+                            </div>
+                        </Grow>
+                    </Grid2>
                 ))}
-            </Grid>
+            </Grid2>
         </Box>
     );
 }
