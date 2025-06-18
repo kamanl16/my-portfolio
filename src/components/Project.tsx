@@ -38,13 +38,6 @@ const projectData = [
         description: "Co-developed a new kiosk system that migrated 500,000+ cards. Later reduced kiosk downtime by 80% by leading a root cause analysis and collaborating with the hardware vendor on physical modifications.",
         tech: ["Java", "C++", "JNI", "ASP.NET", "Vendor Management"],
     },
-    {
-        name: "Backend NRR Device Integration",
-        images: [workPlaceholder],
-        category: "Work Project (Backend & Data)",
-        description: "Developed and containerized a backend Kafka client in 2 weeks to support a network of ~10,000 active devices and built a real-time Elasticsearch dashboard for operational visibility.",
-        tech: ["Java", "Spring Boot", "Kafka", "Elasticsearch", "Docker"],
-    }
 ];
 
 function Project() {
