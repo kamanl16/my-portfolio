@@ -80,7 +80,6 @@ function Timeline() {
     <Box id="history" sx={{ py: '5%', px: { xs: '5%', md: '10%' }, textAlign: 'left' }}>
         <Typography variant="h3">Career History</Typography>
         <VerticalTimeline lineColor={theme.palette.grey[400]}>
-          {/* 2. Now we just map over the data array */}
           {timelineData.map((item, index) => (
             <VerticalTimelineElement
                 key={index}
@@ -90,16 +89,16 @@ function Timeline() {
                 iconStyle={commonIconStyle}
                 icon={<FontAwesomeIcon icon={faBriefcase} style={{ color: '#fff' }} />}
             >
-                <Typography variant="h6" sx={{ fontWeight: 'bold', color: cardTextColor, mb: -1 }}>{item.title}</Typography>
+                <Typography variant="h6" sx={{ fontWeight: 'bold', color: cardTextColor, mb: -2 }}>{item.title}</Typography>
                 <Typography variant="body1" sx={{ fontStyle: 'italic', color: cardSecondaryTextColor, mb: 1 }}>{item.company}</Typography>
                 <Typography variant="body2" sx={{ color: cardSecondaryTextColor, mb: 2}}>
                     {item.description}
                 </Typography>
-                <Typography variant="subtitle1" sx={{ fontWeight: 'bold', color: cardTextColor }}>Key Responsibilities:</Typography>
-                <Box component="ul" sx={{ pl: 2, m: 0, color: cardSecondaryTextColor }}>
+                <Typography variant="subtitle1" sx={{ fontWeight: 'bold', color: cardTextColor, mt: 1}}>Key Responsibilities:</Typography>
+                <Box component="ul" sx={{ pl: 1, m: 0, color: cardSecondaryTextColor }}>
                     {item.responsibilities.map((resp, i) => (
                         <Typography key={i} component="li" variant="body2" sx={{ display: 'flex', gap: 1, mt: 1}}>
-                            <CheckCircleIcon sx={{ color: cardSecondaryTextColor, fontSize: '1.2rem', ml: -1 }}/>
+                            <CheckCircleIcon sx={{ color: cardSecondaryTextColor, fontSize: '1.2rem' }}/>
                             {resp}
                         </Typography>
                     ))}
