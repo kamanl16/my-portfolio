@@ -99,7 +99,7 @@ function Timeline() {
                 <Box component="ul" sx={{ pl: 2, m: 0, color: cardSecondaryTextColor }}>
                     {item.responsibilities.map((resp, i) => (
                         <Typography key={i} component="li" variant="body2" sx={{ display: 'flex', gap: 1, mt: 1}}>
-                            <CheckCircleIcon sx={{ color: cardSecondaryTextColor, fontSize: '1.2rem' }}/>
+                            <CheckCircleIcon sx={{ color: cardSecondaryTextColor, fontSize: '1.2rem', ml: -1 }}/>
                             {resp}
                         </Typography>
                     ))}
