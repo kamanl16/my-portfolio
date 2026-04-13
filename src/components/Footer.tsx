@@ -11,7 +11,7 @@ function Footer() {
         <Link href="https://www.linkedin.com/in/kamanl16/" target="_blank" rel="noreferrer" color="inherit"><LinkedInIcon sx={{ fontSize: '1.1em' }}/></Link>
       </Box>
       <Typography sx={{ fontSize: '0.8em', mt: 1 }}>
-        © 2025 Carmen Leung. All Rights Reserved.
+        © 2026 Carmen Leung. All Rights Reserved.
       </Typography>
     </Box>
   );

@@ -1,22 +1,19 @@
+// src/components/Expertise.tsx
 import React from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faReact, faDocker } from '@fortawesome/free-brands-svg-icons';
-import { faProjectDiagram } from '@fortawesome/free-solid-svg-icons';
+import { faReact, faDocker, faJava } from '@fortawesome/free-brands-svg-icons';
 import { Box, Typography, Chip, useTheme } from '@mui/material';
 
-
-const projectManagementSkills = [
-    "PMP", "PSM I", "Agile", "Waterfall", "SDLC", "Risk Assessment", "Vendor Management", "Change Management", "Jira", "Figma"
+const frontendSkills = [
+    "React", "TypeScript", "JavaScript", "HTML/CSS", "Android SDK", "Figma", "Responsive Design"
 ];
 
-const fullStackSkills = [
-    "Java", "Python", "TypeScript", "JavaScript", "React", "HTML/CSS", "SAPUI5",
-    "Django", "ASP.NET", "REST", "SOAP", "Android SDK", "SQL", "ABAP"
+const backendSkills = [
+    "Java", "Spring Boot", "Python", "Django", "C++", "REST API", "SQL", "MySQL", "MongoDB", "Elasticsearch", "Kafka"
 ];
 
-const cloudAndDataSkills = [
-    "AWS", "Azure", "Docker", "Jenkins", "Git", "RabbitMQ", "Kafka",
-    "SAP HANA S/4", "MySQL", "MongoDB", "Elasticsearch", "Power BI", "Tableau"
+const devOpsAndQualitySkills = [
+    "Docker", "AWS", "Git", "Jenkins", "Unit Testing", "Systematic Debugging", "Jira", "Agile/Scrum"
 ];
 
 function Expertise() {
@@ -31,36 +28,36 @@ function Expertise() {
             }}>
                 <Box>
                     <FontAwesomeIcon icon={faReact} size="3x" style={{ color: theme.palette.text.primary }} />
-                    <Typography variant="h6" sx={{ mt: 2, fontWeight: 'bold' }}>Full Stack Development & System Integration</Typography>
+                    <Typography variant="h6" sx={{ mt: 2, fontWeight: 'bold' }}>Frontend & UI Development</Typography>
                     <Typography paragraph sx={{ mt: 1 }}>
-                        Experience in full-stack development, building and integrating diverse systems using technologies like Java, Python, and React. Proven ability to deliver end-to-end solutions.
+                        Building intuitive, responsive, and dynamic user interfaces using modern frameworks like React and TypeScript. Dedicated to clean code, component reusability, and seamless user experiences.
                     </Typography>
                     <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 0.5, mt: 2 }}>
-                        {fullStackSkills.map((label) => (
+                        {frontendSkills.map((label) => (
                             <Chip key={label} label={label} sx={{ fontFamily: "'Courier Prime', monospace" }} />
                         ))}
                     </Box>
                 </Box>
                 <Box>
-                    <FontAwesomeIcon icon={faDocker} size="3x" style={{ color: theme.palette.text.primary }} />
-                    <Typography variant="h6" sx={{ mt: 2, fontWeight: 'bold' }}>Cloud, DevOps & Data Platforms</Typography>
+                    <FontAwesomeIcon icon={faJava} size="3x" style={{ color: theme.palette.text.primary }} />
+                    <Typography variant="h6" sx={{ mt: 2, fontWeight: 'bold' }}>Backend & Systems Architecture</Typography>
                     <Typography paragraph sx={{ mt: 1 }}>
-                        Proficient in leveraging cloud platforms like AWS and Azure, implementing DevOps practices with Docker and CI/CD pipelines, and managing data analytics solutions.
+                        Architecting and integrating scalable backend systems, RESTful APIs, and complex databases. Experienced in high-concurrency environments utilizing Java, Spring Boot, and C++.
                     </Typography>
                     <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 0.5, mt: 2 }}>
-                        {cloudAndDataSkills.map((label) => (
+                        {backendSkills.map((label) => (
                             <Chip key={label} label={label} sx={{ fontFamily: "'Courier Prime', monospace" }}/>
                         ))}
                     </Box>
                 </Box>
                 <Box>
-                    <FontAwesomeIcon icon={faProjectDiagram} size="3x" style={{ color: theme.palette.text.primary }} />
-                    <Typography variant="h6" sx={{ mt: 2, fontWeight: 'bold' }}>Technical Project Management</Typography>
+                    <FontAwesomeIcon icon={faDocker} size="3x" style={{ color: theme.palette.text.primary }} />
+                    <Typography variant="h6" sx={{ mt: 2, fontWeight: 'bold' }}>DevOps & Quality Assurance</Typography>
                     <Typography paragraph sx={{ mt: 1 }}>
-                        PMP and PSM I certified with over 10 years of experience leading system migrations and the full SDLC for enterprise-scale applications using Agile and hybrid methodologies.
+                        Committed to test-driven development, systematic hypothesis debugging, and containerized deployments. Proficient in Docker, AWS, and establishing reliable testing environments.
                     </Typography>
                     <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 0.5, mt: 2 }}>
-                        {projectManagementSkills.map((label) => (
+                        {devOpsAndQualitySkills.map((label) => (
                             <Chip key={label} label={label} sx={{ fontFamily: "'Courier Prime', monospace" }} />
                         ))}
                     </Box>

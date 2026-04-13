@@ -13,7 +13,7 @@ const educationData = [
         university: "Saint Mary's University",
         date: "Sep 2023 – Jan 2025",
         location: "Halifax, NS",
-        gpa: "GPA: 4.15 / 4.30",
+        gpa: "GPA: 4.23 / 4.30",
         infoFontFamily: "'Consolas', monospace",
         details: [
             "Completed courses in Software Development, Statistics, UI/UX Design, Data Management, and Visualization, strengthening technical and analytical skills."
