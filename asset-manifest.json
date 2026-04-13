@@ -1,20 +1,18 @@
 {
   "files": {
     "main.css": "/my-portfolio/static/css/main.f6f4ee7a.css",
-    "main.js": "/my-portfolio/static/js/main.e68da8cc.js",
+    "main.js": "/my-portfolio/static/js/main.4ac926de.js",
     "static/js/453.41811d64.chunk.js": "/my-portfolio/static/js/453.41811d64.chunk.js",
     "static/media/HotelAppImage01.png": "/my-portfolio/static/media/HotelAppImage01.40cd98106ce00a8866e1.png",
     "static/media/work-project-placeholder.png": "/my-portfolio/static/media/work-project-placeholder.d122da08fde08fa13806.png",
     "static/media/HotelAppImage02.png": "/my-portfolio/static/media/HotelAppImage02.32aaea4a531dab2d95ee.png",
-    "static/media/bg-light.png": "/my-portfolio/static/media/bg-light.bac0efb485244a522981.png",
-    "static/media/bg-dark.png": "/my-portfolio/static/media/bg-dark.f420c6b8458af72de935.png",
     "index.html": "/my-portfolio/index.html",
     "main.f6f4ee7a.css.map": "/my-portfolio/static/css/main.f6f4ee7a.css.map",
-    "main.e68da8cc.js.map": "/my-portfolio/static/js/main.e68da8cc.js.map",
+    "main.4ac926de.js.map": "/my-portfolio/static/js/main.4ac926de.js.map",
     "453.41811d64.chunk.js.map": "/my-portfolio/static/js/453.41811d64.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f6f4ee7a.css",
-    "static/js/main.e68da8cc.js"
+    "static/js/main.4ac926de.js"
   ]
 }
