@@ -55,7 +55,9 @@ export default function ProjectCard({ project }: ProjectCardProps) {
                         display: 'block',
                         overflow: 'hidden',
                         width: '100%',
-                        objectFit: 'cover',
+                        objectFit: 'contain',
+                        backgroundColor: theme.palette.mode === 'dark' ? 'rgba(255, 255, 255, 0.05)' : 'rgba(0, 0, 0, 0.03)', // Adds a subtle background for letterboxing
+                        p: 0.5
                     }}
                     src={project.images[activeStep]}
                     alt={`${project.name} screenshot ${activeStep + 1}`}

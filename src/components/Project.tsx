@@ -8,6 +8,8 @@ import ProjectCard from './ProjectCard';
 import Screen01 from '../assets/images/hotel-app/HotelAppImage01.png';
 import Screen02 from '../assets/images/hotel-app/HotelAppImage02.png';
 import workPlaceholder from '../assets/images/work-project-placeholder.png';
+import Win95Screen from '../assets/images/win95-gameplay.png'
+import KakaLifeScreen from '../assets/images/kaka-life.png'
 
 const projectData = [
     {
@@ -19,7 +21,7 @@ const projectData = [
     },
     {
         name: "Kaka Life: Full-Stack Community Platform",
-        images: [workPlaceholder], 
+        images: [KakaLifeScreen], 
         category: "Full-Stack Developer & Data Engineer",
         description: "Established a secure, cloud-hosted backend utilizing Supabase for PostgreSQL database management, implementing custom data-sync schema tracking and row-level authorization. Engineered automated data-ingestion pipelines using GitHub Actions automation (daily-sync.yml) and serverless execution scripts, programming custom retry mechanisms to manage localized formatting and ensure fail-safe synchronization.",
         tech: ["React", "TypeScript", "Supabase", "PostgreSQL", "GitHub Actions", "Tailwind CSS"],
@@ -35,7 +37,7 @@ const projectData = [
     },
     {
         name: "Windows 95 Chinese Typing Game Replica",
-        images: [workPlaceholder],
+        images: [Win95Screen],
         category: "Frontend Developer (AI-Assisted)",
         description: "Leveraged AI-assisted engineering (Anti-Gravity) to rapidly reconstruct complex game physics, interactive game loops, and real-time typing validation algorithms. Meticulously designed the graphical user interface from scratch to match the exact visual assets, typography, and window interactions of the classic Windows 95 operating system.",
         tech: ["AI", "Game Development", "UI/UX", "State Management"],
