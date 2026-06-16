@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import { Box, Typography, Card, CardContent, CardActions, Chip, Button, IconButton, useTheme } from '@mui/material';
 import GitHubIcon from '@mui/icons-material/GitHub';
+import PlayCircleOutlineIcon from '@mui/icons-material/PlayCircleOutline';
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 
@@ -14,6 +15,7 @@ interface ProjectCardProps {
         description: string;
         tech: string[];
         sourceLink?: string;
+        demoLink?: string;
     };
 }
 
@@ -106,6 +108,17 @@ export default function ProjectCard({ project }: ProjectCardProps) {
                     sx={{ color: cardSecondaryTextColor }}
                 >
                     Source Code
+                </Button>
+                )}
+                {project.demoLink && ( // Only show the button if sourceLink is not null
+                    <Button
+                    href={project.demoLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    startIcon={<PlayCircleOutlineIcon />}
+                    sx={{ color: cardSecondaryTextColor }}
+                >
+                    Demo
                 </Button>
                 )}
             </CardActions>

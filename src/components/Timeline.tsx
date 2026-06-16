@@ -2,7 +2,7 @@
 import React from 'react';
 import { useTheme } from '@mui/material/styles';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCode, faBriefcase, faServer } from '@fortawesome/free-solid-svg-icons';
+import { faCode, faServer, faDatabase } from '@fortawesome/free-solid-svg-icons';
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 import { Typography, Box } from "@mui/material";
@@ -17,44 +17,44 @@ const timelineData = [
         description: "Architected a full-stack SPA for literacy assessment using React, TypeScript, and Django, handling end-to-end delivery from UI design to deployment.",
         responsibilities: [
             "Engineered ML-driven audio features by integrating frontend recording components with backend Python APIs.",
-            "Managed containerized deployment pipelines using Docker and secured the environment via Nginx and Certbot.",
-            "Designed high-fidelity wireframes in Figma and defined the MVP roadmap."
+            "Managed containerized deployment pipelines using Docker and secured the Linux server environment via Nginx and Certbot.",
+            "Designed high-fidelity wireframes in Figma from scratch and defined the technical MVP roadmap."
         ]
     },
     {
         date: "May 2024 – Aug 2024",
-        title: "Graduate Project Consultant & Business Analyst",
+        title: "Graduate Project Consultant & Database Analyst",
         company: "Saint Mary's University & Women's Centres Connect",
-        icon: faServer,
-        description: "Analyzed legacy data structures to define the schema for a new Azure-based unified reporting system serving a 9-centre network.",
+        icon: faDatabase,
+        description: "Analyzed complex legacy data structures to define the schema for a new Azure-based unified reporting system serving a 9-centre network.",
         responsibilities: [
-            "Authored Functional Specification Documents to translate operational needs into technical engineering requirements.",
-            "Built a functional intermediate reporting solution using Google Apps Script to streamline data collection.",
-            "Designed foundational UI components and collaborated on relational database design."
+            "Authored Functional Specification Documents (FSD) to translate ambiguous operational needs into precise technical requirements.",
+            "Built a functional intermediate data-collection pipeline using Google Apps Script to actively reduce manual entry errors.",
+            "Designed foundational UI components and collaborated on the relational database architecture."
         ]
     },
     {
         date: "Jul 2022 – Jun 2024",
-        title: "Project Manager - Finance Solutions",
+        title: "Technical Lead & Project Manager - Finance Solutions",
         company: "Swire Coca-Cola Limited & Swire Pacific Limited",
-        icon: faBriefcase,
-        description: "Led SAP S/4 HANA migrations and remote deployments of customized SAPUI5 workflow systems across Hong Kong, Vietnam, and Cambodia.",
+        icon: faServer,
+        description: "Managed the end-to-end integration of 20+ custom ABAP APIs, connecting an internal financial workflow system with the new SAP S/4 HANA core across Hong Kong, Vietnam, and Cambodia.",
         responsibilities: [
-            "Directed cross-functional development teams to build and integrate 20+ custom ABAP APIs.",
-            "Transitioned delivery models to an Agile-hybrid framework, establishing Jira product backlogs for MVP release cycles.",
-            "Rescued a critical workflow project mid-flight, delivering a solution that processed 15,000+ applications seamlessly."
+            "Spearheaded the remote customization of a scalable SAPUI5 workflow platform to replace legacy systems, eliminating 100% of external licensing costs.",
+            "Led data integrity validation during high-stakes system cutovers, resulting in 11,000+ transactions posting automatically to SAP without manual intervention.",
+            "Transitioned delivery operations to an Agile-hybrid framework, partnering directly with developers to refine technical solutions and API schemas."
         ]
     },
     {
         date: "Apr 2020 – Jul 2022",
-        title: "Assistant Project Manager (Technical Lead)",
+        title: "Technical Lead & Assistant Project Manager",
         company: "Octopus Cards Limited, Hong Kong",
-        icon: faBriefcase,
-        description: "Led technical deliveries for a 7.4M+ user smart card network, including critical government disbursement initiatives and identity-based transfer systems.",
+        icon: faCode,
+        description: "Led technical deliveries and system architecture for a 7.4M+ user smart card network, specializing in secure identity verification and high-concurrency API integrations.",
         responsibilities: [
-            "Audited and recovered unmerged C++/Java codebases, personally coding critical logic to meet strict government deadlines.",
-            "Implemented stateless identity verification flows connecting kiosk frontends with backend REST APIs.",
-            "Designed fault-tolerant architecture handling edge-case transaction failures, achieving 99.9% system uptime."
+            "Audited and recovered a stalled, unmerged core codebase (C++/Java), programming critical state mechanics to secure a government-mandated launch.",
+            "Programmed idempotent transaction logic and stateless real-time verification flows within distributed kiosk applications to securely process public vouchers.",
+            "Designed exception-handling software routines for external hardware integrations, achieving a 95% transaction success rate despite mid-transfer user errors."
         ]
     },
     {
@@ -62,11 +62,11 @@ const timelineData = [
         title: "Senior System Engineer",
         company: "Octopus Cards Limited, Hong Kong",
         icon: faServer,
-        description: "Assumed architectural ownership of the OSP/SK2 distributed kiosk network (50+ nodes), managing the C++/Java stack and scaling backend infrastructure.",
+        description: "Assumed architectural ownership of the OSP/SK2 distributed kiosk network (50+ nodes), managing the C++/Java stack and scaling backend infrastructure for 3.8M monthly users.",
         responsibilities: [
-            "Built a Java Spring Boot Kafka consumer to ingest real-time JSON telemetry from 10,000+ devices into Elasticsearch.",
-            "Designed a robust offline-first synchronization protocol and managed the MS SQL Server local persistence layer.",
-            "Extended legacy infrastructure to support a massive Public Transport Fare Subsidy Scheme for 3.8M monthly users."
+            "Built a standalone data ingestion application using Java Spring Boot and Apache Kafka to stream real-time JSON telemetry from 10,000+ devices into Elasticsearch.",
+            "Programmed secure, low-level on-card write logic to guarantee transaction atomicity and completely prevent duplicate balance claims.",
+            "Deconstructed complex administrative fee logic into 8 distinct software pathways, designing end-to-end UI flows and backend execution scripts."
         ]
     },
     {
@@ -74,11 +74,11 @@ const timelineData = [
         title: "System Engineer / Assistant System Engineer",
         company: "Octopus Cards Limited, Hong Kong",
         icon: faCode,
-        description: "Developed core API libraries and foundational C++ firmware logic bridging smart card readers to Java applications via JNI.",
+        description: "Co-developed foundational terminal APIs and low-level C++ firmware code bridging smart card hardware to Java execution environments via JNI.",
         responsibilities: [
-            "Executed contract-first SOA implementations using Apache CXF and Ant scripts for WSDL-to-Java stub generation.",
-            "Re-engineered hardware-software interaction logic in C++ via systematic debugging, reducing hardware downtime by 80%.",
-            "Developed localized MS SQL Server integration logic handling high-frequency writes for transactional tracking."
+            "Standardized backend enterprise integrations using Apache CXF and Ant scripting to automate WSDL-to-Java stub generation.",
+            "Engineered local MS SQL Server relational databases on remote client terminals, optimizing query execution plans for sub-second content rendering.",
+            "Spearheaded technical investigations into hardware-software communication tolerances, refactoring C++ physical handling logic to achieve an 80% reduction in downtime."
         ]
     },
     {
@@ -86,7 +86,7 @@ const timelineData = [
         title: "Mobile Application Programmer Trainee",
         company: "Top Pine Technology Limited, Hong Kong",
         icon: faCode,
-        description: "Developed and launched 5 distinct Android applications from concept to completion using Java and the Android SDK.",
+        description: "Developed and published 5 distinct Android applications from concept to production using Java and the Android SDK.",
         responsibilities: [
             "Built interactive UI components and dynamic game loops for educational arithmetic and vocabulary apps.",
             "Managed memory limits and application lifecycles natively within the mobile environment.",
@@ -119,7 +119,7 @@ function Timeline() {
 
   return (
     <Box id="history" sx={{ py: '5%', px: { xs: '5%', md: '10%' }, textAlign: 'left' }}>
-        <Typography variant="h3">Career History</Typography>
+        <Typography variant="h3" sx={{ mb: 4 }}>Career History</Typography>
         <VerticalTimeline lineColor={theme.palette.grey[400]}>
           {timelineData.map((item, index) => (
             <VerticalTimelineElement
@@ -130,16 +130,16 @@ function Timeline() {
                 iconStyle={commonIconStyle}
                 icon={<FontAwesomeIcon icon={item.icon} style={{ color: '#fff' }} />}
             >
-                <Typography variant="h6" sx={{ fontWeight: 'bold', color: cardTextColor, mb: -2 }}>{item.title}</Typography>
+                <Typography variant="h6" sx={{ fontWeight: 'bold', color: cardTextColor, mb: 0 }}>{item.title}</Typography>
                 <Typography variant="body1" sx={{ fontStyle: 'italic', color: cardSecondaryTextColor, mb: 1 }}>{item.company}</Typography>
                 <Typography variant="body2" sx={{ color: cardSecondaryTextColor, mb: 2}}>
                     {item.description}
                 </Typography>
-                <Typography variant="subtitle1" sx={{ fontWeight: 'bold', color: cardTextColor, mt: 1}}>Key Responsibilities:</Typography>
+                <Typography variant="subtitle2" sx={{ fontWeight: 'bold', color: cardTextColor, mt: 1}}>Key Technical Execution:</Typography>
                 <Box component="ul" sx={{ pl: 1, m: 0, color: cardSecondaryTextColor }}>
                     {item.responsibilities.map((resp, i) => (
                         <Typography key={i} component="li" variant="body2" sx={{ display: 'flex', gap: 1, mt: 1}}>
-                            <CheckCircleIcon sx={{ color: cardSecondaryTextColor, fontSize: '1.2rem' }}/>
+                            <CheckCircleIcon sx={{ color: cardSecondaryTextColor, fontSize: '1.2rem', mt: 0.2 }}/>
                             {resp}
                         </Typography>
                     ))}
